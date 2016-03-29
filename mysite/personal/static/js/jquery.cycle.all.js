@@ -1,12 +1,4 @@
-/*!
- * jQuery Cycle Plugin (with Transition Definitions)
- * Examples and documentation at: http://jquery.malsup.com/cycle/
- * Copyright (c) 2007-2013 M. Alsup
- * Version: 3.0.2 (19-APR-2013)
- * Dual licensed under the MIT and GPL licenses.
- * http://jquery.malsup.com/license.html
- * Requires: jQuery v1.7.1 or later
- */
+
 ;(function($, undefined) {
 "use strict";
 
@@ -23,17 +15,6 @@ function log() {
 $.expr[':'].paused = function(el) {
 	return el.cyclePause;
 };
-
-
-// the options arg can be...
-//   a number  - indicates an immediate transition should occur to the given slide index
-//   a string  - 'pause', 'resume', 'toggle', 'next', 'prev', 'stop', 'destroy' or the name of a transition effect (ie, 'fade', 'zoom', etc)
-//   an object - properties to control the slideshow
-//
-// the arg2 arg can be...
-//   the name of an fx (only used in conjunction with a numeric value for 'options')
-//   the value true (only used in first arg == 'resume') and indicates
-//	 that the resume should occur immediately (not wait for next timeout)
 
 $.fn.cycle = function(options, arg2) {
 	var o = { s: this.selector, c: this.context };
